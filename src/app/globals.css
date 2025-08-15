@@ -24,3 +24,181 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.orbitron {
+  font-family: "Orbitron", Regular;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Voltec";
+  src: url("/fonts/Voltec Free Version.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-voltec {
+  font-family: "Voltec", Regular;
+}
+
+@font-face {
+  font-family: "Atomos";
+  src: url("/fonts/Atomos-Outline.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.font-atomos {
+  font-family: "Atomos", Outline;
+}
+
+@font-face {
+  font-family: "AtomosRegular";
+  src: url("/fonts/Atomos Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.font-atomos-regular {
+  font-family: "AtomosRegular", Regular;
+}
+
+@font-face {
+  font-family: "PressStart2P";
+  src: url("/fonts/PressStart2P.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.font-pressStart2P-regular {
+  font-family: "PressStart2P", Regular;
+}
+
+@font-face {
+  font-family: "Megaton";
+  src: url("/fonts/Megaton.ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+.font-megaton-regular {
+  font-family: "Megaton", Regular;
+}
+
+.wallet-button {
+  position: relative;
+  padding: 12px 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.wallet-button::before,
+.wallet-button::after,
+.wallet-button span::before,
+.wallet-button span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+}
+
+.wallet-button::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.wallet-button::after {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+
+.wallet-button span::before {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+
+.wallet-button span::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.futuristic-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  width: 250px;
+  height: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  position: absolute;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.line-top,
+.line-bottom {
+  width: 85%;
+  height: 2px;
+}
+.line-top {
+  top: 0;
+  left: 15%;
+}
+.line-bottom {
+  bottom: 0;
+  left: 2%;
+}
+
+.line-left,
+.line-right {
+  width: 2.5px;
+  height: 52%;
+}
+.line-left {
+  left: 0;
+  top: 45%;
+}
+.line-right {
+  right: 0;
+  top: 0%;
+}
+
+.line-top-left,
+.line-top-right {
+  width: 43px;
+  height: 2px;
+}
+.line-top-left {
+  top: 13px;
+  left: -2px;
+  transform: rotate(-38deg);
+}
+.line-top-right {
+  bottom: 13px;
+  right: -4px;
+  transform: rotate(-38deg);
+}
