@@ -93,12 +93,12 @@ const HeroSection = () => {
         </div>
         <div className="absolute top-1/2 left-8 -translate-y-1/2 z-20 hidden md:block">
           <HudText>
-            <span className="text-white">///:</span> 0.20
+            <span className="text-white">{"///:"}</span> 0.20
           </HudText>
         </div>
         <div className="absolute top-1/2 right-8 -translate-y-1/2 z-20 hidden md:block">
           <HudText>
-            0.49 <span className="text-white">:\\\</span>
+            0.49 <span className="text-white">{":\\\\"}</span>
           </HudText>
         </div>
         <main className="relative flex flex-col items-center justify-center h-screen z-10 p-4">
