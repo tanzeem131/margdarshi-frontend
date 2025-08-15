@@ -1,17 +1,9 @@
 "use client";
 
-import ConnectWalletBtn from "@/components/Button";
 import { motion, Variants } from "framer-motion";
-import TextInput from "@/components/TextHeading";
 import LeagueTable from "@/components/LeaderBoard";
 import Foooter from "@/components/Footer";
-
-const Header = () => (
-  <header className="w-full p-6 flex justify-between items-center border-b-2 border-white">
-    <TextInput text="Exyz" />
-    <ConnectWalletBtn />
-  </header>
-);
+import Image from "next/image";
 
 const Marquee = () => {
   const marqueeVariants: Variants = {
@@ -60,32 +52,33 @@ const Marquee = () => {
 };
 
 const NFTCard = () => (
-  <div className="bg-[#E0E0E0] aspect-[3/4] p-4 flex items-center justify-center border-2 border-white">
-    <svg
-      className="w-1/2 h-1/2 text-gray-500"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
+  <div className="group hover:border-2 hover:border-gray-700 relative hover:cursor-pointer">
+    <div
+      style={{ position: "relative", height: "500px" }}
+      className="bg-[#eff1f3] scale-100 group-hover:scale-95 transition-transform"
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+      <Image
+        src={"/logos/defaultpic.png"}
+        alt="defaultpic"
+        fill
+        style={{ objectFit: "contain" }}
       />
-    </svg>
+      <div className="absolute flex flex-col items-center align-middle justify-center bottom-0 w-full h-20 text-2xl bg-orange-600 text-white text-center py-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        <span className="font-pressStart2P-regular text-[18px] text-center">
+          BUY MINT 20 SOL
+        </span>
+      </div>
+    </div>
   </div>
 );
 
 const NFTCollection = () => {
   return (
-    <div className="min-h-screen w-full bg-[#000D18] font-sans">
-      <Header />
+    <div className="min-h-screen w-full bg-[#000D18] font-sans mt-20">
       <Marquee />
       <main className="p-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-8">
-          {Array.from({ length: 8 }).map((_, index) => (
+          {Array.from({ length: 8 }).map((item, index) => (
             <NFTCard key={index} />
           ))}
         </div>
